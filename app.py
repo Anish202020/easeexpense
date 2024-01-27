@@ -19,13 +19,13 @@ import psycopg2
 app = Flask(__name__)
 
 # Configure MySQL connection
-# db = mysql.connector.connect(
-#     host=os.getenv('host'),
-#     user=os.getenv('user'),
-#     password=os.getenv('password'),
-#     database=os.getenv('database')
-# )
-db = psycopg2.connect(os.getenv('DATABASE_URL'))
+db = mysql.connector.connect(
+    host=os.getenv('host'),
+    user=os.getenv('user'),
+    password=os.getenv('password'),
+    database=os.getenv('database')
+)
+
 # Create a cursor
 cursor = db.cursor()
 
